@@ -1,0 +1,122 @@
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins-Medium.ttf'), url('../assets/fonts/Poppins-Black.ttf') format('truetype'), url('../assets/fonts/Poppins-Medium.ttf') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    --secondary-color: #D1884F;
+    --primery-color:#008AAA;
+    --altern-color:#3BBADB;
+    --black-color:#000000;
+    --white-color:#ffffff;
+    font-family: 'Poppins';
+}
+.nav-links{
+    display: flex;
+    justify-content: right;
+    margin-bottom: 10px;
+    
+}
+
+.nav-links ul{
+    display: flex;
+    justify-content: space-around;
+    min-width: 230px;
+    list-style-type:none;
+}
+.nav-links ul li{
+    display: flex;
+    max-height: 25px;
+    margin-left: 15px;
+    justify-content: space-around;
+}
+.nav-links ul :first-child a{
+    color:var(--secondary-color)
+}
+
+.nav-links ul li a{
+    margin-left: 5px;
+    text-decoration: none;
+    color:var(--black-color);
+}
+.nav-links ul li img{
+    width: 20px;
+}
+.page-content{
+    display: flex;
+}
+.page-content figure{
+    flex: 2;
+    margin: 0px;
+    margin-left: 10px;
+}
+.page-content article{
+    flex: 3;
+    margin-right: 5px;
+    margin-left: 2vw;
+}
+.personal-image{
+    max-width: 75%;
+    border-radius: 0% 0% 0% 55%;
+    box-shadow: -2.5em 15px 0 -15px var(--altern-color);
+}
+article .headers h1{
+    color: var(--primery-color);
+    font-size: 3vw;
+}
+article .headers p{
+    color: var(--altern-color);
+    font-size: 2vw;
+}
+article .headers h1 .career{
+    color: var(--secondary-color);
+}
+article p {
+    font-size: 2vw;
+}
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 2vw;
+}
+.btns button:first-child{
+    margin-right: 5vw;
+}
+.btns button{
+        background-color: var(--white-color);; 
+        color: var(--altern-color); 
+        border-radius: 6px;
+        border: 1px solid var(--altern-color);
+        font-size: 1.5vw;
+        padding: 5px;
+}
+.btns button:hover {
+    background-color: var(--altern-color);
+    color: var(--white-color);
+    box-shadow: -2.5em 15px 0 -15px var(--altern-color);
+}
+
+@media (width < 600px ) {
+    .page-content{
+        flex-direction: column-reverse;
+        margin-left: 5vw;
+        align-items: baseline;
+    }
+    .btns{
+        margin-left: 5vw;
+    }
+    .nav-links ul li{
+        font-size: 3vw;
+    }
+    .btns button{
+        font-size: 2.5vw;
+    }
+    .page-content figure {
+        display: flex;
+        justify-content: center;
+    }
+}
